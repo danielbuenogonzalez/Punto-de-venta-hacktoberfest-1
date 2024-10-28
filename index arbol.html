@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reforestando Tijuana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f4f7;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #28a745;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://via.placeholder.com/1200x500') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin: 20px 0;
+        }
+
+        .cta-buttons {
+            margin-top: 20px;
+        }
+
+        .btn-primary,
+        .btn-secondary {
+            padding: 15px 30px;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 1.1em;
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background-color: white;
+            color: #28a745;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .about-project,
+        .sponsor-tree,
+        .educational-impact {
+            background-color: white;
+            margin: 40px 0;
+            padding: 60px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.1em;
+            margin-bottom: 40px;
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 500px;
+            border-radius: 10px;
+        }
+
+        /* Cards */
+        .news-articles {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .news-articles article {
+            width: 30%;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .news-articles article:hover {
+            transform: translateY(-10px);
+        }
+
+        .read-more {
+            display: inline-block;
+            margin-top: 10px;
+            color: #28a745;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #28a745;
+            color: white;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .footer-social a {
+            color: white;
+            margin: 0 10px;
+            font-size: 1.5em;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+            }
+
+            .hero h2 {
+                font-size: 2.5em;
+            }
+
+            .news-articles article {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Reforestando Tijuana</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#proyecto">Proyecto</a></li>
+                <li><a href="#mapa">Mapa</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>¡Un árbol a la vez, mejoramos Tijuana!</h2>
+        <p>Conviértete en padrino y monitoriza tu árbol en tiempo real con nuestra plataforma digital.</p>
+        <div class="cta-buttons">
+            <a href="#apadrina" class="btn-primary">Apadrina un Árbol</a>
+            <a href="#mapa" class="btn-secondary">Ver el Mapa</a>
+        </div>
+    </section>
+
+    <!-- Sobre el Proyecto -->
+    <section id="proyecto" class="about-project">
+        <h2>¿Qué es Reforestando Tijuana?</h2>
+        <p>Este proyecto busca crear una plataforma digital para el monitoreo y apadrinamiento de árboles, ayudando a regenerar espacios verdes en la ciudad.</p>
+        <a href="#apadrina" class="btn-primary">Conoce más</a>
+    </section>
+
+    <!-- Apadrina un Árbol -->
+    <section id="apadrina" class="sponsor-tree">
+        <h2>Apadrina un Árbol</h2>
+        <p>Selecciona un árbol y recíbelo con geolocalización, estado y alertas personalizadas como en un Tamagotchi.</p>
+        <a href="#mapa" class="btn-primary">Apadrina Ahora</a>
+    </section>
+
+    <!-- Mapa Interactivo -->
+    <section id="mapa" class="interactive-map">
+        <h2>Ubica los árboles plantados</h2>
+        <p>Explora el mapa interactivo con la ubicación de cada árbol plantado, su padrino y sus detalles.</p>
+        <div class="map-container">
+            <iframe src="https://obedalvarado.pw/demo/localizador/" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Impacto Educativo -->
+    <section id="impacto" class="educational-impact">
+        <h2>Impacto Educativo y Ambiental</h2>
+        <p>Enseñamos sobre la importancia de plantar árboles y mejorar el medio ambiente, involucrando a la comunidad local y a las escuelas.</p>
+    </section>
+
+    <!-- Noticias -->
+    <section id="noticias" class="news-updates">
+        <h2>Últimas Noticias</h2>
+        <div class="news-articles">
+            <article>
+                <h3>Nueva jornada de reforestación</h3>
+                <p>Plantas locales y frutales se suman al esfuerzo por reverdecer Tijuana.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+            <article>
+                <h3>Más escuelas se unen al proyecto</h3>
+                <p>Escuelas locales apadrinan árboles y educan a los alumnos en prácticas sostenibles.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+            <article>
+                <h3>Actualización del mapa interactivo</h3>
+                <p>La plataforma ya cuenta con más de 1,000 árboles registrados y geolocalizados.</p>
+                <a href="#" class="read-more">Leer más</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#proyecto">Sobre Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </div>
+        <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
